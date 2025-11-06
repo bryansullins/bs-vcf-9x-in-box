@@ -1,8 +1,8 @@
 {
   "sddcId": "vcf-m01",
-  "vcfInstanceName": "William Lam's VCF 9 Instance",
+  "vcfInstanceName": "Bryan's VCF 9 Instance",
   "workflowType": "VCF",
-  "version": "9.0.0.0",
+  "version": "9.0.1.0",
   "ceipEnabled": false,
   "fipsEnabled": true,
   "skipEsxThumbprintValidation": true,
@@ -24,17 +24,19 @@
   },
   "dnsSpec": {
     "nameservers": [
-      "192.168.30.29"
+      "172.30.0.5",
+      "172.30.0.6"
     ],
-    "subdomain": "vcf.lab"
+    "subdomain": "chekhovspun.lab"
   },
   "ntpServers": [
-    "104.167.215.195"
+    "0.pool.ntp.org",
+    "1.pool.ntp.org"
   ],
   "vcenterSpec": {
     "vcenterHostname": "vc01",
     "rootVcenterPassword": "",
-    "vmSize": "small",
+    "vmSize": "tiny",
     "storageSize": "",
     "adminUserSsoPassword": "",
     "ssoDomain": "vsphere.local",
@@ -42,17 +44,17 @@
   },
   "hostSpecs": [
     {
-      "hostname": "esx01",
+      "hostname": "esx01.chekhovspun.lab",
       "credentials": {
         "username": "root",
-        "password": "VMware1!"
+        "password": ""
       }
     },
     {
-      "hostname": "esx02",
+      "hostname": "esx02.chekhovspun.lab",
       "credentials": {
         "username": "root",
-        "password": "VMware1!"
+        "password": ""
       }
     }
   ],
@@ -90,14 +92,14 @@
       "description": "ESXi Host Overlay TEP IP Pool",
       "subnets": [
         {
-          "cidr": "172.30.60.0/24",
+          "cidr": "172.60.0.0/24",
           "ipAddressPoolRanges": [
             {
-              "start": "172.30.60.150",
-              "end": "172.30.60.160"
+              "start": "172.60.0.150",
+              "end": "172.60.0.160"
             }
           ],
-          "gateway": "172.30.60.1"
+          "gateway": "172.60.0.1"
         }
       ]
     },
@@ -174,14 +176,14 @@
     },
     {
       "networkType": "VMOTION",
-      "subnet": "172.30.40.0/24",
-      "gateway": "172.30.40.1",
+      "subnet": "172.40.0.0/24",
+      "gateway": "172.40.0.1",
       "subnetMask": null,
       "includeIpAddress": null,
       "includeIpAddressRanges": [
         {
-          "startIpAddress": "172.30.40.150",
-          "endIpAddress": "172.30.40.160"
+          "startIpAddress": "172.40.0.150",
+          "endIpAddress": "172.40.0.160"
         }
       ],
       "vlanId": "40",
@@ -195,14 +197,14 @@
     },
     {
       "networkType": "VSAN",
-      "subnet": "172.30.50.0/24",
-      "gateway": "172.30.50.1",
+      "subnet": "172.50.0.0/24",
+      "gateway": "172.50.0.1",
       "subnetMask": null,
       "includeIpAddress": null,
       "includeIpAddressRanges": [
         {
-          "startIpAddress": "172.30.50.150",
-          "endIpAddress": "172.30.50.160"
+          "startIpAddress": "172.50.0.150",
+          "endIpAddress": "172.50.0.160"
         }
       ],
       "vlanId": "50",
@@ -241,7 +243,7 @@
       "vmnicsToUplinks": [
         {
           "uplink": "uplink1",
-          "id": "vmnic0"
+          "id": "vmnic1"
         }
       ],
       "nsxTeamings": [
@@ -255,7 +257,7 @@
       ],
       "lagSpecs": null,
       "vmnics": [
-        "vmnic0"
+        "vmnic1"
       ]
     }
   ]

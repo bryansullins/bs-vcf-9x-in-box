@@ -1,0 +1,15 @@
+network:
+  version: 2
+  ethernets:
+    ens34:
+      addresses:
+      - "172.30.0.6/24"
+      nameservers:
+        addresses:
+        - 172.30.0.6
+        - 172.30.0.5
+        search:
+        - chekhovspun.lab
+      routes:
+      - to: "default"
+        via: "172.30.0.1"

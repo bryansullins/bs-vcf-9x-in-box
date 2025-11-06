@@ -1,7 +1,7 @@
 # ------------------------ Config ------------------------
 $vcFqdn = "vc01.vcf.lab"
 $vcUsername = "administrator@vsphere.local"
-$vcPassword = ConvertTo-SecureString "VMware1!VMware1!" -AsPlainText -Force
+$vcPassword = ConvertTo-SecureString "" -AsPlainText -Force
 $vcCreds = New-Object System.Management.Automation.PSCredential ($vcUsername, $vcPassword)
 
 $pingInterval = 900      # 15 minutes in seconds

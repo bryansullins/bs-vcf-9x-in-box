@@ -5,7 +5,7 @@ $ESXiRootPassowrd = "VMware1!"
 
 $VCFInstallerVMName = "sddcm01"
 $VCFInstallerFQDN = "sddcm01.vcf.lab"
-$VCFInstallerRootPassword = "VMware1!VMware1!"
+$VCFInstallerRootPassword = ""
 $SSHKeys = ""
 
 $VCFFeatureProperties = @{
