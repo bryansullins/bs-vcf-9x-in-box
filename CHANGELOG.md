@@ -30,4 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+- config/ks-esx03.cfg
+- config/unbound.conf
+
 ### Fixed
