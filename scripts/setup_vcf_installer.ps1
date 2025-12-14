@@ -1,11 +1,11 @@
 # Author: William Lam
 
-$ESXiServer = "esx01.vcf.lab"
-$ESXiRootPassowrd = "VMware1!"
+$ESXiServer = "esx01.chekhovspun.lab"
+$ESXiRootPassowrd = "VMware1!VMware1!"
 
 $VCFInstallerVMName = "sddcm01"
-$VCFInstallerFQDN = "sddcm01.vcf.lab"
-$VCFInstallerRootPassword = ""
+$VCFInstallerFQDN = "sddcm01.chekhovspun.lab"
+$VCFInstallerRootPassword = "VMware1!VMware1!"
 $SSHKeys = ""
 
 $VCFFeatureProperties = @{

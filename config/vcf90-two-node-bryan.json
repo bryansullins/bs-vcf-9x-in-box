@@ -10,17 +10,17 @@
   "sddcManagerSpec": {
     "rootUserCredentials": {
       "username": "root",
-      "password": ""
+      "password": "VMware1!VMware1!"
     },
     "secondUserCredentials": {
       "username": "vcf",
-      "password": ""
+      "password": "VMware1!VMware1!"
     },
     "hostname": "sddcm01",
     "useExistingDeployment": true,
-    "rootPassword": "",
-    "sshPassword": "",
-    "localUserPassword": ""
+    "rootPassword": "VMware1!VMware1!",
+    "sshPassword": "VMware1!VMware1!",
+    "localUserPassword": "VMware1!VMware1!"
   },
   "dnsSpec": {
     "nameservers": [
@@ -35,10 +35,10 @@
   ],
   "vcenterSpec": {
     "vcenterHostname": "vc01",
-    "rootVcenterPassword": "",
+    "rootVcenterPassword": "VMware1!VMware1!",
     "vmSize": "tiny",
     "storageSize": "",
-    "adminUserSsoPassword": "",
+    "adminUserSsoPassword": "VMware1!VMware1!",
     "ssoDomain": "vsphere.local",
     "useExistingDeployment": false
   },
@@ -47,14 +47,14 @@
       "hostname": "esx01.chekhovspun.lab",
       "credentials": {
         "username": "root",
-        "password": ""
+        "password": "VMware1!VMware1!"
       }
     },
     {
       "hostname": "esx02.chekhovspun.lab",
       "credentials": {
         "username": "root",
-        "password": ""
+        "password": "VMware1!VMware1!"
       }
     }
   ],
@@ -83,9 +83,9 @@
     ],
     "vipFqdn": "nsx01",
     "useExistingDeployment": false,
-    "nsxtAdminPassword": "",
-    "nsxtAuditPassword": "",
-    "rootNsxtManagerPassword": "",
+    "nsxtAdminPassword": "VMware1!VMware1!",
+    "nsxtAuditPassword": "VMware1!VMware1!",
+    "rootNsxtManagerPassword": "VMware1!VMware1!",
     "skipNsxOverlayOverManagementNetwork": true,
     "ipAddressPoolSpec": {
       "name": "tep01",
@@ -109,30 +109,30 @@
     "nodes": [
       {
         "hostname": "vcf01",
-        "rootUserPassword": "",
+        "rootUserPassword": "VMware1!VMware1!",
         "type": "master"
       }
     ],
-    "adminUserPassword": "",
+    "adminUserPassword": "VMware1!VMware1!",
     "applianceSize": "small",
     "useExistingDeployment": false,
     "loadBalancerFqdn": ""
   },
   "vcfOperationsFleetManagementSpec": {
     "hostname": "opsfm01",
-    "rootUserPassword": "",
-    "adminUserPassword": "",
+    "rootUserPassword": "VMware1!VMware1!",
+    "adminUserPassword": "VMware1!VMware1!",
     "useExistingDeployment": false
   },
   "vcfOperationsCollectorSpec": {
     "hostname": "opsproxy01",
     "applicationSize": "small",
-    "rootUserPassword": "",
+    "rootUserPassword": "VMware1!VMware1!",
     "useExistingDeployment": false
   },
   "vcfAutomationSpec": {
     "hostname": "auto01",
-    "adminUserPassword": "",
+    "adminUserPassword": "VMware1!VMware1!",
     "ipPool": [
       "172.30.0.31",
       "172.30.0.32"

@@ -1,5 +1,5 @@
 # ------------------------ Config ------------------------
-$vcFqdn = "vc01.vcf.lab"
+$vcFqdn = "vc01.chekhovspun.lab"
 $vcUsername = "administrator@vsphere.local"
 $vcPassword = ConvertTo-SecureString "" -AsPlainText -Force
 $vcCreds = New-Object System.Management.Automation.PSCredential ($vcUsername, $vcPassword)
