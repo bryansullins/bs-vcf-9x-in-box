@@ -30,8 +30,8 @@
     "subdomain": "chekhovspun.lab"
   },
   "ntpServers": [
-    "0.pool.ntp.org",
-    "1.pool.ntp.org"
+    "129.6.15.28",
+    "132.163.96.1"
   ],
   "vcenterSpec": {
     "vcenterHostname": "vc01",
