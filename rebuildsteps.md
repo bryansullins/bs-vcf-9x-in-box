@@ -22,9 +22,16 @@
 
 ## AVI Single Node Deployment
 
+<<<<<<< Updated upstream
 1. Downlad desired AVI Version.
 2. Use AVI upload script here: [VCF TOOLS](https://github.com/avinetworks/devops/tree/master/tools/vcf/)
 3. Fill in all items, otherwise it will fail (parens don't mean default).
 4. Edit feature.properties on SDDCM01 - feature.vcf.vgl-41078.alb.single.node.cluster=true
 5. Restart services with echo 'y' | /opt/vmware/vcf/operationsmanager/scripts/cli/sddcmanager_restart_services.sh.
 6. Run the deploy_one_node_nsx_alb.ps1 script
+=======
+Use deploy_one_node_nsx_alb.ps1
+Next: Setup the Cert for IP SANS: https://techdocs.broadcom.com/us/en/vmware-security-load-balancing/avi-load-balancer/avi-kubernetes-operator/2-1/avi-kubernetes-operator-guide-2-1/avi-kubernetes-operator-deployment-guide/ako-and-tanzu/deploying-ako-on-vsphere-with-tanzu-on-nsx-t-via-supervisor.html
+
+#--------------------------------------------------------------------
+>>>>>>> Stashed changes
