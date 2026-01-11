@@ -28,3 +28,22 @@
 4. Edit feature.properties on SDDCM01 - feature.vcf.vgl-41078.alb.single.node.cluster=true
 5. Restart services with echo 'y' | /opt/vmware/vcf/operationsmanager/scripts/cli/sddcmanager_restart_services.sh.
 6. Run the deploy_one_node_nsx_alb.ps1 script
+
+## Supervisor steps
+
+Use deploy_one_node_nsx_alb.ps1
+Next: Setup the Cert for IP SANS: https://techdocs.broadcom.com/us/en/vmware-security-load-balancing/avi-load-balancer/avi-kubernetes-operator/2-1/avi-kubernetes-operator-guide-2-1/avi-kubernetes-operator-deployment-guide/ako-and-tanzu/deploying-ako-on-vsphere-with-tanzu-on-nsx-t-via-supervisor.html
+
+AVI Setup:
+
+https://labs.hol.vmware.com/HOL/catalog/lab/26881
+
+https://techdocs.broadcom.com/us/en/vmware-security-load-balancing/avi-load-balancer/avi-load-balancer-vmware-cloud-foundation/9-0/deploying-supervisor-with-nsx-and-avi-load-balancer.html
+
+https://vworld.com.pl/from-zero-to-a-scalable-application-in-vcf-9-0-the-complete-hyper-detailed-configuration-guide/
+
+IMPORTANT:
+
+https://techdocs.broadcom.com/us/en/vmware-security-load-balancing/avi-load-balancer/avi-kubernetes-operator/2-1/avi-kubernetes-operator-guide-2-1/avi-kubernetes-operator-deployment-guide/ako-and-tanzu/deploying-ako-on-vsphere-with-tanzu-on-nsx-t-via-supervisor.html
+
+
