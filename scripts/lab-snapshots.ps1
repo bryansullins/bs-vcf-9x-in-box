@@ -1,7 +1,7 @@
-$VCFVMS = Get-VM -Tag "vcf-main"
+$VCFVMS = Get-VM -Tag "vcf-main" | Where-Object {$_.Name -notLike 'vc01*'}
 
 # Create snapshots for all NSX/AVI related VMs and Config
-ForEach ($vm in $VCFVMS) { Get-VM -Name $vm.Name | New-Snapshot -Name "Before AVI Setup Snap" -Memory -Quiesce -Description "Snapshot before AVI config." }
+ForEach ($vm in $VCFVMS) { Get-VM -Name $vm.Name | New-Snapshot -Name "Before-Supervisor-Install" -Memory -Quiesce -Description "Snapshot before Supervisor Installation." }
 
 <# ----- Official List based on tags: --------------
 Name                 PowerState Num CPUs MemoryGB
@@ -23,6 +23,7 @@ $VCFVMS = Get-VM -Tag "vcf-main" | Where-Object {$_.Name -notLike 'vc01*'}
 ForEach ($vm in $VCFVMS) { $snapshot = Get-Snapshot -VM $vm.Name ; Set-VM -VM $vm.Name -Snapshot $snapshot -Confirm:$false }
 $vcsnap = Get-Snapshot -VM "vc01"
 Set-VM -VM 'vc01' -Snapshot $vcsnap
+
 
 ForEach ($vm in $VCFVMS) { $snapshot = Get-Snapshot -VM $vm.Name -Name $snapshotName ; Set-VM -VM $vm.Name -Snapshot $snapshot -Confirm:$false }
 

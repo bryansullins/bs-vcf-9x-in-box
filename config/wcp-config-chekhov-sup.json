@@ -1,0 +1,61 @@
+{
+  "specVersion": "1.0",
+  "supervisorSpec": {
+    "supervisorName": "chekhov-sup"
+  },
+  "envSpec": {
+    "vcenterDetails": {
+      "vcenterAddress": "vc01.chekhovspun.lab",
+      "vcenterDatacenter": "VCF-Datacenter",
+      "vSphereZones": [
+        "chekhov-zone01"
+      ]
+    }
+  },
+  "tkgsComponentSpec": {
+    "tkgsMgmtNetworkSpec": {
+      "tkgsMgmtIpAssignmentMode": "STATICRANGE",
+      "tkgsMgmtNetworkName": "DVPG_FOR_VM_MANAGEMENT",
+      "tkgsMgmtZoneNetworks": [
+        "DVPG_FOR_VM_MANAGEMENT"
+      ],
+      "tkgsMgmtNetworkGatewayCidr": "172.30.0.1/24",
+      "tkgsMgmtNetworkStartingIp": "172.30.0.50 - 172.30.0.55",
+      "tkgsMgmtNetworkDnsServers": [
+        "172.30.0.5",
+        "172.30.0.6"
+      ],
+      "tkgsMgmtNetworkSearchDomains": [
+        "chekhovspun.lab"
+      ],
+      "tkgsMgmtNetworkNtpServers": [
+        "132.163.96.1",
+        "129.6.15.28"
+      ]
+    },
+    "tkgsStoragePolicySpec": {
+      "masterStoragePolicy": "VCF-Mgmt-Cluster - Optimal Datastore Default Policy - RAID1",
+      "ephemeralStoragePolicy": "VCF-Mgmt-Cluster - Optimal Datastore Default Policy - RAID1",
+      "imageStoragePolicy": "VCF-Mgmt-Cluster - Optimal Datastore Default Policy - RAID1"
+    },
+    "nsxVpcNetworkInfo": {
+      "nsxVpcProject": "Default",
+      "nsxVpcConnectivityProfile": "Default VPC Connectivity Profile",
+      "tkgsWorkloadServiceCidr": "10.96.0.0/23",
+      "nsxVpcPrivateCidrs": [
+        "172.26.0.0/16"
+      ],
+      "nsxVpcDnsServers": [
+        "172.30.0.5",
+        "172.30.0.6"
+      ],
+      "nsxNtpDnsServers": [
+        "129.6.15.28",
+        "132.163.96.1"
+      ]
+    },
+    "controlPlaneSize": "SMALL",
+    "defaultServiceContentLibrary": "Kubernetes Service Content Library",
+    "cpvmCount": 1
+  }
+}
