@@ -19,6 +19,20 @@
 1. System->Fabric->Hosts->(select vSphere Cluster)->Action->Activate NSX on DVPG
 2. Walk through the Cluster creation in https://williamlam.com/2025/07/ms-a2-vcf-9-0-lab-configuring-nsx-virtual-private-cloud-vpc.html
 3. Implement Workaround: [William Lam's NSX Edge Workaround Script for Ryzen](./scripts/nsxedge-avi/configure_nsx_edge_on_amd_ryzen.ps1)
+4. Create static route on T0 for traffic coming in from physical router:
+
+AVI-Setup
+10.1.12.0/25
+1
+IP Address 100.64.0.1
+Success
+
+default-route
+0.0.0.0/0
+1
+IP Address: 172.70.0.1
+Success
+
 
 ## AVI Single Node Deployment
 
@@ -31,7 +45,8 @@
 
 ## Supervisor steps
 
-Use deploy_one_node_nsx_alb.ps1
+Storage policy - simple: vSAN RAID-0 FTT=0
+
 Next: Setup the Cert for IP SANS: https://techdocs.broadcom.com/us/en/vmware-security-load-balancing/avi-load-balancer/avi-kubernetes-operator/2-1/avi-kubernetes-operator-guide-2-1/avi-kubernetes-operator-deployment-guide/ako-and-tanzu/deploying-ako-on-vsphere-with-tanzu-on-nsx-t-via-supervisor.html
 
 AVI Setup:
@@ -46,4 +61,4 @@ IMPORTANT:
 
 https://techdocs.broadcom.com/us/en/vmware-security-load-balancing/avi-load-balancer/avi-kubernetes-operator/2-1/avi-kubernetes-operator-guide-2-1/avi-kubernetes-operator-deployment-guide/ako-and-tanzu/deploying-ako-on-vsphere-with-tanzu-on-nsx-t-via-supervisor.html
 
-
+AVI Main Setup Link: https://techdocs.broadcom.com/us/en/vmware-security-load-balancing/avi-load-balancer/avi-load-balancer-vmware-cloud-foundation/9-0/deploying-avi-load-balancer-in-vcf.html

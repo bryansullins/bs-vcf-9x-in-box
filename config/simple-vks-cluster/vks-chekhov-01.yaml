@@ -51,7 +51,7 @@ spec:
         value: best-effort-xsmall
       #persistent storage class for cluster nodes
       - name: storageClass
-        value: vks-policy
+        value: vks-simple
       # default storageclass for control plane and worker node pools
       # - name: defaultStorageClass
       #  value: vks-policy

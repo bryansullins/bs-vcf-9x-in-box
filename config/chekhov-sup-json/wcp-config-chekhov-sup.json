@@ -6,13 +6,19 @@
   "envSpec": {
     "vcenterDetails": {
       "vcenterAddress": "vc01.chekhovspun.lab",
-      "vcenterCluster": "VCF-Mgmt-Cluster"
+      "vcenterDatacenter": "VCF-Datacenter",
+      "vSphereZones": [
+        "domain-c10"
+      ]
     }
   },
   "tkgsComponentSpec": {
     "tkgsMgmtNetworkSpec": {
       "tkgsMgmtIpAssignmentMode": "STATICRANGE",
       "tkgsMgmtNetworkName": "DVPG_FOR_VM_MANAGEMENT",
+      "tkgsMgmtZoneNetworks": [
+        "DVPG_FOR_VM_MANAGEMENT"
+      ],
       "tkgsMgmtNetworkGatewayCidr": "172.30.0.1/24",
       "tkgsMgmtNetworkStartingIp": "172.30.0.50 - 172.30.0.55",
       "tkgsMgmtNetworkDnsServers": [
@@ -49,9 +55,7 @@
       ]
     },
     "controlPlaneSize": "SMALL",
-    "apiServerDnsNames": [
-      "sv01.chekhovspun.lab"
-    ],
+    "defaultServiceContentLibrary": "Kubernetes Service Content Library",
     "cpvmCount": 1
   }
 }
