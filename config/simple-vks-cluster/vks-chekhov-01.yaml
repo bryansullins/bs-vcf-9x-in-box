@@ -3,9 +3,9 @@ kind: Cluster
 #define the cluster
 metadata:
   #user-defined name of the cluster; string
-  name: vks-chekhov-01
+  name: vks-chekhov-cl
   #kubernetes namespace for the cluster; string
-  namespace: vks-chekhov
+  namespace: vks-chekhov-01
 #define the desired state of cluster
 spec:
   #specify the cluster network; required, there is no default
@@ -14,12 +14,12 @@ spec:
     services:
       #ranges of network addresses; string array
       #CAUTION: must not overlap with Supervisor
-      cidrBlocks: ["192.168.10.0/26"]
+      cidrBlocks: ["10.244.0.0/24"]
     #network ranges from which Pod networks are allocated
     pods:
       #ranges of network addresses; string array
       #CAUTION: must not overlap with Supervisor
-      cidrBlocks: ["172.26.0.64/24"]
+      cidrBlocks: ["10.96.0.0/24"]
     #domain name for services; string
     serviceDomain: "chekhovspun.local"
   #specify the topology for the cluster

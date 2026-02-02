@@ -28,4 +28,4 @@ Set-VM -VM 'vc01' -Snapshot $vcsnap
 ForEach ($vm in $VCFVMS) { $snapshot = Get-Snapshot -VM $vm.Name -Name $snapshotName ; Set-VM -VM $vm.Name -Snapshot $snapshot -Confirm:$false }
 
 # Delete snapshots
-ForEach ($vm in $VCFVMS) { Get-VM -Name $vm.Name | Get-Snapshot | Remove-Snapshot -Confirm:$false }
+ForEach ($vm in $VCFVMS) { Get-VM -Name $vm.Name | Get-Snapshot | Remove-Snapshot }
