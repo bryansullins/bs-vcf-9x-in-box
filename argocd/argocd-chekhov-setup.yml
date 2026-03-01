@@ -1,0 +1,21 @@
+apiVersion: argocd-service.vsphere.vmware.com/v1alpha1
+kind: ArgoCD
+metadata:
+  name: chekhov-argocd
+  namespace: chekhov-argocd
+spec:
+  version: "3.0.19+vmware.1-vks.1"
+  enableLoadBalancer: true          # expose UI externally
+  url: https://argocd.chekhov.lab   # optional for DNS
+  controller:
+    replicas: 1                     # controller component replicas
+  applicationSet:
+    enabled: true                   # optional
+    replicas: 1
+  repo:
+    replicas: 1
+  server:
+    replicas: 1
+  notification:
+    enabled: true
+    replicas: 1
