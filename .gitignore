@@ -3,3 +3,5 @@
 .DS_Store
 **/*.ova
 root.crt
+vks-count.ps1
+
